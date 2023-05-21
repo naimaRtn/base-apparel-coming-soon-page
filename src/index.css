@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  
+  height: fit-content;
+  
+}
+
+body{
+  min-width: 260px;
+  width: 100%;
+  height: fit-content;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+
+.Header{
+  height: 10%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.Header-logo{
+  height: 60%;
+  min-width: 96px;
+  min-height: 20px;
+}
+
+
+.mobile-img, .Hero{
+  /* height: 250px; */
+  width: 100%;
+  min-width: 260px;
+ 
+}
+.desktop-img{
+  display: none;
+}
+
+.Main{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  padding-bottom: 45px;
+  min-width: 260;
+  /* width: 375px;*/
+}
+
+
+.Main h1{
+  text-align: center;
+  padding: 0 40px;
+  letter-spacing: 10px;
+  color: hsl(0, 6%, 24%);
+}
+
+.Main h1 span{
+ font-weight: 300;
+ /* color: hsl(0, 93%, 68%); */
+ color: hsl(0, 36%, 70%);
+}
+
+.Main p{
+  text-align: center;
+  margin-top: 35px;
+  color: hsl(0, 36%, 70%);
+  line-height: 25px;
+  min-width: 260px;
+}
+
+
+#root{
+  height: 100%;
+}
+/* ///////////////////////////////////////////////////// */
+@media only screen and (min-width: 768px){*
+  html{
+    max-height: 800px;
+  }
+  body{  
+    background-image: url(/home/iratni/base-apparel-coming-soon-master/Project/images/bg-pattern-desktop.svg);
+    background-color:  white;
+    background-repeat: no-repeat;
+   }
+
+  #root{
+   
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 1fr;
+    /* row-gap: 0px; */
+    height: 100%;
+    
+  }
+  .Header{
+   padding-top: 60px;
+    height: 100%;
+  }
+
+  .Header-logo{
+    margin-left: 90px;
+    height: 90%;
+  }
+
+  .Main{
+    padding: 0;
+    height: 100%;
+  }
+
+  .Main p{
+    text-align: left;
+    margin: 25px 270px 0 90px;
+    line-height: 30px;
+   
+  }
+.Main h1 {
+  text-align: left;
+  padding: 0;
+  margin: 25px 90px 20px 90px;
+  font-size: 5em;
+}
+
+
+  .desktop-img, .Hero{
+    /* height: 250px; */
+    display: block;
+    /* width: 100%; */
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    
+   
+  }
+
+  .desktop-img{
+    align-self: flex-end ;
+  }
+
+  .mobile-img{
+    display: none;
+  }
+
+  form{
+    margin: 90px;
+    margin-top: 55px;
+    width: 60%;
+    align-self: flex-start ;
+  }
+}
+
+/* ## Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */

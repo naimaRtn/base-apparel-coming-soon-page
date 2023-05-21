@@ -1,0 +1,63 @@
+form{
+    position: relative;
+    width: 90%;
+    height: 52px;
+    border-radius:30px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    
+}
+
+
+input{
+   
+    width: 99%;
+    height: 50px;
+    border-radius:30px;
+    border: none;
+    padding-left: 20px;
+    
+    
+   
+}
+input::placeholder{
+    
+    font-size: 1.1em;
+    color:  hsl(0, 36%, 70%);
+}
+
+form::before{
+    position: absolute;
+    content:url(Project/images/icon-arrow.svg);
+    height: 50px;
+    width: 23%;
+    right: 0;
+    border-radius:30px ;
+    background-image: linear-gradient( 135deg,  hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 5px 10px 20px hsl(0, 36%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form:hover::before{
+   scale: 1.2;
+}
+
+input:invalid{
+    background-image: url(Project/images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 70% center ;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+}
+
+
+/*
+- Linear, 135deg,: from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
